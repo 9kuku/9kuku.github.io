@@ -9,10 +9,10 @@ export const apiClient = axios.create({
 });
 
 apiClient.interceptors.request.use((config) => {
-  const accessToken = localStorage.getItem("access_token");
+  const Authorization = localStorage.getItem("Authorization");
 
-  if (accessToken && config.headers) {
-    config.headers["Authorization"] = `Bearer ${accessToken}`;
+  if (Authorization && config.headers) {
+    config.headers["Authorization"] = `Bearer ${Authorization}`;
   }
   return config;
 });

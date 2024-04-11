@@ -4,6 +4,7 @@ import Auth from "./pages/Auth";
 import { lazy, Suspense } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { mainContainer } from "./shared/globalStyle";
+import Product from "./pages/Product";
 
 const Todo = lazy(() => import("./pages/Todo"));
 
@@ -13,9 +14,10 @@ function App() {
       <Route path="/" element={<Auth />} />
 
       <Route
-        path="/todo"
+        path="/products"
         element={
           <Suspense fallback={<div css={mainContainer}>...로딩중</div>}>
+            <Product />
           </Suspense>
         }
       />

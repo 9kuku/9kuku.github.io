@@ -21,9 +21,10 @@ const Login = ({ isShown, onOpen }) => {
   const handleLoginClick = () => {
     loginApi(userInfo.username, userInfo.password)
       .then((res) => {
+        console.log(res)
         notice("success", "로그인 성공");
-        localStorage.setItem("access_token", res.data.access_token);
-        navigate("/todo");
+        localStorage.setItem("Authorization", res.headers['authorization']);
+        navigate("/products");
       })
       .catch((err) => {
         notice("error", err.response.data.message);
@@ -46,7 +47,7 @@ const Login = ({ isShown, onOpen }) => {
         <input
           css={authSytle.inputCss}
           type="password"
-          placeholder="Password"
+          placeholder="password"
           required=""
           onChange={handleInputValue("password")}
         />
