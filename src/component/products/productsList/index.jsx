@@ -24,7 +24,7 @@ const ProductsList = () => {
   return (
     <article css={productWrapper}>
       {productData?.map((product) => (
-        <ProductItem key={product.id} product={product} />
+        <ProductItem key={product.productId} product={product} />
       ))}
     </article>
   );
