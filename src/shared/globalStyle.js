@@ -24,6 +24,7 @@ export const mainContainer = css`
   height: 800px;
   background: red;
   overflow: hidden;
+  overflow-y: auto;
   background: linear-gradient(
     to bottom,
     ${COLOR.Purple450},
