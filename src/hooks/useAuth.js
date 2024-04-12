@@ -1,23 +1,30 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router";
-import { getTodoApi } from "../api/todo";
+
+import { verifyTokenApi } from "../api/auth"; // 토큰을 검증하는 API 함수
 
 const useAuth = () => {
   const navigate = useNavigate();
 
-  // 원래는 토큰이 맞는지 확인해야 하지만
-  // 토큰 인증하는 api 가 없어서 getTodoApi로 대체
   useEffect(() => {
-    const getData = () => {
-      getTodoApi()
-        .then((res) => {
-          navigate("/todo");
-        })
-        .catch((err) => {
+    const token = localStorage.getItem('token'); // 로컬 스토리지에서 토큰을 가져옵니다.
+
+    if (!token) {
+      navigate("/");
+      return;
+    }
+
+    verifyTokenApi(token) // 토큰을 검증하는 API 요청을 보냅니다.
+      .then((res) => {
+        if (res.isValid) { // 토큰이 유효하면 /products로 이동합니다.
+          navigate("/products");
+        } else { // 토큰이 유효하지 않으면 로그인 페이지로 이동합니다.
           navigate("/");
-        });
-    };
-    getData();
+        }
+      })
+      .catch((err) => {
+        navigate("/");
+      });
   }, []);
 
   return;

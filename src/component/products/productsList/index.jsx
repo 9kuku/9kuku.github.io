@@ -1,12 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { useContext, useEffect } from "react";
-import { dispatchProductContext, productContext } from "../../../context/ProductContext";
+import { dispatchProductContext, productsContext } from "../../../context/ProductsContext";
 import { productWrapper } from "./style";
-import { getAllProductApi } from "../../../api/product";
-import ProductItem from "../productItem";
+import { getAllProductApi } from "../../../api/products";
+import ProductItem from "../productsItem";
 
-const ProductList = () => {
-  const productData = useContext(productContext);
+const ProductsList = () => {
+  const productData = useContext(productsContext);
   const dispatch = useContext(dispatchProductContext);
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default ProductsList;

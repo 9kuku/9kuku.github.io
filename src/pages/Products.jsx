@@ -1,12 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { useEffect, useState } from "react";
-import ProductList from "../component/product/productList";
+import ProductList from "../component/products/productsList";
 import useAuth from "../hooks/useAuth";
 import { mainContainer } from "../shared/globalStyle";
-import { getAllProductApi } from "../api/product";
-import ProductContextWrapper from "../context/ProductContext";
+import { getAllProductApi } from "../api/products";
+import ProductContextWrapper from "../context/ProductsContext";
+import ProductsList from "../component/products/productsList";
 
-const Product = () => {
+const Products = () => {
   useAuth();
 
   const [productData, setProductData] = useState();
@@ -27,9 +28,9 @@ const Product = () => {
   return (
     <section css={mainContainer}>
       <ProductContextWrapper>
-        <ProductList />
+        <ProductsList />
       </ProductContextWrapper>
     </section>
   );
 };
-export default Product;
+export default Products;

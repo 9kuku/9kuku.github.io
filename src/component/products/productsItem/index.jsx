@@ -1,6 +1,6 @@
 import { productItemStyle, productItemImageStyle, productItemNameStyle, productItemPriceStyle } from './style';
 
-const ProductItem = ({ product }) => {
+const ProductsItem = ({ product }) => {
   return (
     <div css={productItemStyle}>
       <img src={product.image} alt={product.name} css={productItemImageStyle} />
@@ -10,4 +10,4 @@ const ProductItem = ({ product }) => {
   );
 };
 
-export default ProductItem;
+export default ProductsItem;
