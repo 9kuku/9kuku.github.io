@@ -20,8 +20,8 @@ export const customBodyStyle = css`
 `;
 
 export const mainContainer = css`
-  width: 350px;
-  height: 530px;
+  width: 1000px;
+  height: 800px;
   background: red;
   overflow: hidden;
   background: linear-gradient(

@@ -1,11 +1,12 @@
 import { productItemStyle, productItemImageStyle, productItemNameStyle, productItemPriceStyle } from './style';
 
 const ProductsItem = ({ product }) => {
+  console.log(product);
   return (
     <div css={productItemStyle}>
-      <img src={product.image} alt={product.name} css={productItemImageStyle} />
-      <h2 css={productItemNameStyle}>{product.name}</h2>
-      <p css={productItemPriceStyle}>{product.price}</p>
+      <h2 css={productItemNameStyle}>{product.productId}</h2>
+      <h2 css={productItemNameStyle}>{product.productName}</h2>
+      <p css={productItemPriceStyle}>{product.productPrice}</p>
     </div>
   );
 };

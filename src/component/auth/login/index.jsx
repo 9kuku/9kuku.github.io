@@ -24,7 +24,7 @@ const Login = ({ isShown, onOpen }) => {
         console.log(res)
         notice("success", "로그인 성공");
         localStorage.setItem("Authorization", res.headers['authorization']);
-        navigate("/products");
+        navigate("/main");
       })
       .catch((err) => {
         notice("error", err.response.data.message);

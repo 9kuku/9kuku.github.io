@@ -26,11 +26,13 @@ const Products = () => {
   }, []);
 
   return (
-    <section css={mainContainer}>
+    <>
       <ProductContextWrapper>
-        <ProductsList />
+        <section css={mainContainer}>
+          <ProductsList productData={productData} />
+        </section>
       </ProductContextWrapper>
-    </section>
+    </>
   );
 };
 export default Products;
