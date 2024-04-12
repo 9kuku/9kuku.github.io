@@ -1,7 +1,6 @@
 import { productItemStyle, productItemImageStyle, productItemNameStyle, productItemPriceStyle } from './style';
 
 const ProductsItem = ({ product }) => {
-  console.log(product);
   return (
     <div css={productItemStyle}>
       <h2 css={productItemNameStyle}>{product.productId}</h2>
