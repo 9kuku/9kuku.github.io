@@ -8,7 +8,7 @@ import Main from "./pages/Main";
 
 function App() {
   return (
-    <Routes>
+    <Routes basename={process.env.PUBLIC_URL}>
       <Route path="/" element={<Auth />} />
       <Route
         path="/main"
