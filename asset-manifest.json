@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/9oods-front/static/css/main.3d10672c.css",
+    "main.js": "/9oods-front/static/js/main.68957f12.js",
+    "index.html": "/9oods-front/index.html",
+    "main.3d10672c.css.map": "/9oods-front/static/css/main.3d10672c.css.map",
+    "main.68957f12.js.map": "/9oods-front/static/js/main.68957f12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d10672c.css",
+    "static/js/main.68957f12.js"
+  ]
+}
