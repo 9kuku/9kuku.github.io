@@ -19,7 +19,7 @@ function App() {
         }
       />
       <Route path="/products" element={<Products />} />
-      <Route path="/event" element={<div>이벤트</div>} />
+      <Route path="/event" element={<div>이벤트(아직)</div>} />
     </Routes>
   );
 }
