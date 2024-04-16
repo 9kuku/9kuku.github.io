@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { mainContainer } from "./shared/globalStyle";
 import Products from "./pages/Products";
 import Main from "./pages/Main";
+import Events from "./pages/Events";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         }
       />
       <Route path="/products" element={<Products />} />
-      <Route path="/event" element={<div>이벤트(아직)</div>} />
+      <Route path="/event" element={<Events />} />
     </Routes>
   );
 }
