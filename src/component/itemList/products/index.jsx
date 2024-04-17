@@ -16,7 +16,6 @@ const itemList = () => {
       try {
         const res = await getAllProductApi(page); // page 상태 값을 인자로 전달
         dispatch({ type: "INIT", initProducts: res.data.content });
-        console.log(res.data)
         setTotalPages(res.data.totalPages);
       } catch (err) {
         console.error(err);
