@@ -21,7 +21,6 @@ const Login = ({ isShown, onOpen }) => {
   const handleLoginClick = () => {
     loginApi(userInfo.username, userInfo.password)
       .then((res) => {
-        console.log(res)
         notice("success", "로그인 성공");
         localStorage.setItem("Authorization", res.headers['authorization']);
         navigate("/main");
