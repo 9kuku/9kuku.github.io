@@ -12,6 +12,7 @@ import Orders from "./pages/Orders";
 import Coupons from "./pages/Coupons";
 import AllProducts from "./pages/AllProducts";
 import Events from "./pages/Events";
+import SellersProducts from "./pages/SellersProducts";
 
 
 function App() {
@@ -28,8 +29,7 @@ function App() {
       />
       <Route path="/products" element={<Products />} />
       <Route path="/products/allproducts" element={<AllProducts />} />
-      {/*아직 seller별 상품조회는 구현되지 않았습니다.*/}
-      <Route path="/products/sellerproducts" element={<AllProducts />} />
+      <Route path="/products/sellersproducts" element={<SellersProducts />} />
 
       <Route path="/events" element={<Events />} />
       <Route path="/events/allevents" element={<AllEvents />} />

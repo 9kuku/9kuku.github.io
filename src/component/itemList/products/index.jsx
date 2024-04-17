@@ -5,7 +5,7 @@ import { productWrapper } from "./style";
 import { getAllProductApi } from "../../../api/products";
 import ProductItem from "../../item/productsItem";
 
-const itemList = () => {
+const itemList = ({ fetchProducts }) => {
   const productData = useContext(productsContext);
   const dispatch = useContext(dispatchProductContext);
   const [page, setPage] = useState(0);
@@ -14,7 +14,7 @@ const itemList = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await getAllProductApi(page); // page 상태 값을 인자로 전달
+        const res = await fetchProducts(page);
         dispatch({ type: "INIT", initProducts: res.data.content });
         setTotalPages(res.data.totalPages);
       } catch (err) {

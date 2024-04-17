@@ -4,21 +4,21 @@ import useAuth from "../hooks/useAuth";
 import { mainContainer } from "../shared/globalStyle";
 import ProductContextWrapper from "../context/ProductsContext";
 import ProductsList from "../component/itemList/products";
-import { getAllEventsApi } from "../api/events";
-import EventContextWrapper from "../context/EventsContext";
-import { getAllProductApi } from "../api/products";
+import { getAllProductApi, getSellersProductApi } from "../api/products";
+import { useLocation } from "react-router-dom"; // Added this line
 
-const AllProducts = () => {
+const SellersProducts = () => {
   useAuth();
+  const location = useLocation();
+  const brandName = location.state.brandName;
 
   const [productData, setProductData] = useState();
 
   useEffect(() => {
     const getData = () => {
-      getAllProductApi()
+      getSellersProductApi(brandName)
         .then((res) => {
           setProductData(res.data);
-          console.log(res.data);
         })
         .catch((err) => {
           throw new Error(err);
@@ -31,10 +31,10 @@ const AllProducts = () => {
     <>
       <ProductContextWrapper>
         <section css={mainContainer}>
-          <ProductsList fetchProducts={getAllProductApi} productData={productData} />
+          <ProductsList fetchProducts={() => getSellersProductApi(brandName)} productData={productData} />
         </section>
       </ProductContextWrapper>
     </>
   );
 };
-export default AllProducts;
+export default SellersProducts;
