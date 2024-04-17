@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://www.9oods.store/static/css/main.3d10672c.css",
-    "main.js": "https://www.9oods.store/static/js/main.5ba426ee.js",
-    "index.html": "https://www.9oods.store/index.html",
-    "main.3d10672c.css.map": "https://www.9oods.store/static/css/main.3d10672c.css.map",
-    "main.5ba426ee.js.map": "https://www.9oods.store/static/js/main.5ba426ee.js.map"
+    "main.css": "https://9oods.store/static/css/main.3d10672c.css",
+    "main.js": "https://9oods.store/static/js/main.16b74f98.js",
+    "index.html": "https://9oods.store/index.html",
+    "main.3d10672c.css.map": "https://9oods.store/static/css/main.3d10672c.css.map",
+    "main.16b74f98.js.map": "https://9oods.store/static/js/main.16b74f98.js.map"
   },
   "entrypoints": [
     "static/css/main.3d10672c.css",
-    "static/js/main.5ba426ee.js"
+    "static/js/main.16b74f98.js"
   ]
 }
