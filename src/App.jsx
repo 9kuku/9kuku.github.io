@@ -5,11 +5,13 @@ import "react-toastify/dist/ReactToastify.css";
 import { mainContainer } from "./shared/globalStyle";
 import Products from "./pages/Products";
 import Main from "./pages/Main";
-import Events from "./pages/Events";
+import AllEvents from "./pages/AllEvents";
 import Users from "./pages/Users";
 import Sellers from "./pages/Sellers";
 import Orders from "./pages/Orders";
 import Coupons from "./pages/Coupons";
+import AllProducts from "./pages/AllProducts";
+import Events from "./pages/Events";
 
 
 function App() {
@@ -25,11 +27,21 @@ function App() {
         }
       />
       <Route path="/products" element={<Products />} />
-      <Route path="/event" element={<Events />} />
-      {/*<Route path="/users" element={<Users />} />*/}
-      {/*<Route path="/sellers" element={<Sellers />} />*/}
-      {/*<Route path="/orders" element={<Orders />} />*/}
-      {/*<Route path="/coupons" element={<Coupons />} />*/}
+      <Route path="/products/allproducts" element={<AllProducts />} />
+      {/*아직 seller별 상품조회는 구현되지 않았습니다.*/}
+      <Route path="/products/sellerproducts" element={<AllProducts />} />
+
+      <Route path="/events" element={<Events />} />
+      <Route path="/events/allevents" element={<AllEvents />} />
+
+      <Route path="/users" element={<Users />} />
+
+      <Route path="/sellers" element={<Sellers />} />
+
+      <Route path="/orders" element={<Orders />} />
+
+      <Route path="/coupons" element={<Coupons />} />
+
     </Routes>
   );
 }

@@ -10,11 +10,6 @@ export const productItemStyle = css`
   border-radius: 10px;
 `;
 
-export const productItemImageStyle = css`
-  width: 100%;
-  height: auto;
-`;
-
 export const productItemNameStyle = css`
   margin: 10px 0;
   font-size: 20px;

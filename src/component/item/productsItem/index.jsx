@@ -1,4 +1,4 @@
-import { productItemStyle, productItemImageStyle, productItemNameStyle, productItemPriceStyle } from './style';
+import { productItemStyle, productItemNameStyle, productItemPriceStyle } from './style';
 
 const ProductsItem = ({ product }) => {
   return (

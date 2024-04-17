@@ -6,32 +6,22 @@ import { mainContainer } from "../shared/globalStyle";
 import { getAllProductApi } from "../api/products";
 import ProductContextWrapper from "../context/ProductsContext";
 import ProductsList from "../component/itemList/products";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
-  useAuth();
-
-  const [productData, setProductData] = useState();
-
-  useEffect(() => {
-    const getData = () => {
-      getAllProductApi()
-        .then((res) => {
-          setProductData(res.data);
-        })
-        .catch((err) => {
-          throw new Error(err);
-        });
-    };
-    getData();
-  }, []);
-
+  const navigate = useNavigate();
+  function handleAllProductClick() {
+    navigate("/products/allProducts");
+  }
+  function handleSellerProductClick() {
+    navigate("/sellerproducts");
+  }
   return (
     <>
-      <ProductContextWrapper>
-        <section css={mainContainer}>
-          <ProductsList productData={productData} />
-        </section>
-      </ProductContextWrapper>
+      <section css={mainContainer}>
+        <div onClick={handleAllProductClick} style={{ cursor: "pointer", color: "white"}}>상품 전체 조회</div>
+        <div onClick={handleSellerProductClick} style={{ cursor: "pointer", color: "white"}}>상품 셀러별 조회</div>
+      </section>
     </>
   );
 };

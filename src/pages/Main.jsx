@@ -9,7 +9,7 @@ const Main = () => {
   };
 
   const handleEventClick = () => {
-    navigate("/event");
+    navigate("/events");
   };
   const handleUserClick = () => {
     navigate("/users");
@@ -29,14 +29,13 @@ const Main = () => {
 
   return (
     <>
-      <div onClick={handleUserClick} style={{ cursor: "pointer" }}> 회원</div>
-      <div onClick={handleSellerClick} style={{ cursor: "pointer" }}> 셀러</div>
-      <div onClick={handleOrderClick} style={{ cursor: "pointer" }}> 주문</div>
-      <div onClick={handleProductClick} style={{ cursor: "pointer" }}> 조회</div>
-      <div onClick={handleEventClick} style={{ cursor: "pointer" }}> 이벤트</div>
-      <div onClick={handleCouponClick} style={{ cursor: "pointer" }}> 쿠폰</div>
-      <div onClick={handleProductClick} style={{ cursor: "pointer" }}> 상품</div>
-
+      <div onClick={handleUserClick} style={{ cursor: "pointer", color: "white"}}> 회원</div>
+      <div onClick={handleSellerClick} style={{ cursor: "pointer", color: "white"}}> 셀러</div>
+      <div onClick={handleOrderClick} style={{ cursor: "pointer", color: "white"}}> 주문</div>
+      <div onClick={handleProductClick} style={{ cursor: "pointer", color: "white"}}> 조회</div>
+      <div onClick={handleEventClick} style={{ cursor: "pointer", color: "white"}}> 이벤트</div>
+      <div onClick={handleCouponClick} style={{ cursor: "pointer", color: "white"}}> 쿠폰</div>
+      <div onClick={handleProductClick} style={{ cursor: "pointer", color: "white"}}> 상품</div>
     </>
   );
 };

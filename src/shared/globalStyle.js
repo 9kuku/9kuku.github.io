@@ -33,4 +33,5 @@ export const mainContainer = css`
   );
   border-radius: 10px;
   box-shadow: 5px 20px 50px #000;
+    color: #fff;
 `;
