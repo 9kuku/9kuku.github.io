@@ -26,10 +26,10 @@ function App() {
       />
       <Route path="/products" element={<Products />} />
       <Route path="/event" element={<Events />} />
-      <Route path="/users" element={<Users />} />
-      <Route path="/sellers" element={<Sellers />} />
-      <Route path="/orders" element={<Orders />} />
-      <Route path="/coupons" element={<Coupons />} />
+      {/*<Route path="/users" element={<Users />} />*/}
+      {/*<Route path="/sellers" element={<Sellers />} />*/}
+      {/*<Route path="/orders" element={<Orders />} />*/}
+      {/*<Route path="/coupons" element={<Coupons />} />*/}
     </Routes>
   );
 }
