@@ -6,7 +6,7 @@ const EventProductItem = ({ product }) => {
       <h3>{product.productName}</h3>
       <p>{product.productDescription}</p>
       <p>가격: {product.productPrice}</p>
-      <p>브랜드: {product.brandName}</p>
+      <p>브랜드: {product.domainName}</p>
     </div>
   );
 };
