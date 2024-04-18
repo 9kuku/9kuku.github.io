@@ -12,14 +12,14 @@ const Login = ({ isShown, onOpen }) => {
   const {
     userInfo,
     handleInputValue,
-    usernameIsAbled,
-    usernameWarnList,
+    emailIsAbled,
+    emailWarnList,
     passwordIsAbled,
     passwordWarnList,
   } = useSignForm();
 
   const handleLoginClick = () => {
-    loginApi(userInfo.username, userInfo.password)
+    loginApi(userInfo.email, userInfo.password)
       .then((res) => {
         notice("success", "로그인 성공");
         localStorage.setItem("Authorization", res.headers['authorization']);
@@ -39,9 +39,9 @@ const Login = ({ isShown, onOpen }) => {
         <input
           css={authSytle.inputCss}
           type="text"
-          placeholder="username"
+          placeholder="Email"
           required=""
-          onChange={handleInputValue("username")}
+          onChange={handleInputValue("email")}
         />
         <input
           css={authSytle.inputCss}
@@ -51,7 +51,7 @@ const Login = ({ isShown, onOpen }) => {
           onChange={handleInputValue("password")}
         />
         <div css={loginErrorWrapper}>
-          {usernameWarnList?.map((item) => (
+          {emailWarnList?.map((item) => (
             <div key={item}>{item}</div>
           ))}
           {passwordWarnList?.map((item) => (
@@ -61,8 +61,8 @@ const Login = ({ isShown, onOpen }) => {
 
         <authSytle.AuthButton
           onClick={handleLoginClick}
-          disabled={!usernameIsAbled || !passwordIsAbled}
-          emailisabled={usernameIsAbled.toString()}
+          disabled={!emailIsAbled || !passwordIsAbled}
+          emailisabled={emailIsAbled.toString()}
           passwordisabled={passwordIsAbled.toString()}
         >
           Login

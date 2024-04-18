@@ -2,7 +2,7 @@ import { useState } from "react";
 
 /**
  * validity 체크하는 hook
- * @param {"username" || "password"} type
+ * @param {"email" || "password"} type
  * @returns
  */
 const useValidate = (type) => {
@@ -19,8 +19,8 @@ const useValidate = (type) => {
         warnText: "비밀번호는 8글자 이상이어야 합니다.",
         fn: new RegExp("(?=.{8,})"),
       },
-      username: {
-        warnText: "username(이메일)에는 @가 포함되어야 합니다.",
+      email: {
+        warnText: "Email에는 @가 포함되어야 합니다.",
         fn: new RegExp("@"),
       },
     };

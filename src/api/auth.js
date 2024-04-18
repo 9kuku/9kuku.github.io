@@ -1,11 +1,11 @@
 import { apiClient } from "./client";
 
-export const loginApi = async (username, password) => {
-  return apiClient.post("/api/v1/auth/login", { username, password });
+export const loginApi = async (email, password) => {
+  return apiClient.post("/api/v1/auth/login", { email, password });
 };
 
-export const signUpApi = async (realName, username, password) => {
-  return apiClient.post("/api/v1/users/signup", { realName,username, password });
+export const signUpApi = async (realName, email, password) => {
+  return apiClient.post("/api/v1/users/signup", { realName,email, password });
 };
 export const verifyTokenApi = (token) => {
   // Your code to verify the token goes here.

@@ -12,15 +12,15 @@ const SignUp = ({ onOpen, onClose }) => {
     handleInputValue,
     realNameIsAbled,
     realNameWarnList,
-    usernameIsAbled,
-    usernameWarnList,
+    emailIsAbled,
+    emailWarnList,
     passwordIsAbled,
     passwordWarnList,
   } = useSignForm();
 
   const handleSignUpClick = (e) => {
     e.preventDefault();
-    signUpApi(userInfo.realName, userInfo.username, userInfo.password)
+    signUpApi(userInfo.realName, userInfo.email, userInfo.password)
       .then(() => {
         e.target.reset();
         notice("success", "회원가입 성공");
@@ -39,17 +39,17 @@ const SignUp = ({ onOpen, onClose }) => {
 
       <input
         type="text"
-        placeholder="realName"
+        placeholder="실명"
         required=""
         css={authSytle.inputCss}
         onChange={handleInputValue("realName")}
       />
       <input
         type="text"
-        placeholder="username"
+        placeholder="Email"
         required=""
         css={authSytle.inputCss}
-        onChange={handleInputValue("username")}
+        onChange={handleInputValue("email")}
       />
       <input
         type="password"
@@ -63,7 +63,7 @@ const SignUp = ({ onOpen, onClose }) => {
         {realNameWarnList?.map((item) => (
           <div key={item}>{item}</div>
         ))}
-        {usernameWarnList?.map((item) => (
+        {emailWarnList?.map((item) => (
           <div key={item}>{item}</div>
         ))}
         {passwordWarnList?.map((item) => (
@@ -72,9 +72,9 @@ const SignUp = ({ onOpen, onClose }) => {
       </div>
 
       <authSytle.AuthButton
-        disabled={!usernameIsAbled || !passwordIsAbled}
+        disabled={!emailIsAbled || !passwordIsAbled}
         realNameisabled={realNameIsAbled.toString()}
-        emailisabled={usernameIsAbled.toString()}
+        emailisabled={emailIsAbled.toString()}
         passwordisabled={passwordIsAbled.toString()}
       >
         Sign up
