@@ -10,8 +10,8 @@ import { useNavigate } from "react-router-dom";
 
 const Products = () => {
   const navigate = useNavigate();
-  function handleAllProductClick() {
-    navigate("/products/allProducts");
+  function handleProductRegisterClick() {
+    navigate("/seller/product-register");
   }
   function handleSellerProductClick() {
     navigate("/sellerproducts");
@@ -19,7 +19,7 @@ const Products = () => {
   return (
     <>
       <section css={mainContainer}>
-        <div onClick={handleAllProductClick} style={{ cursor: "pointer", color: "white" }}>상품등록</div>
+        <div onClick={handleProductRegisterClick} style={{ cursor: "pointer", color: "white" }}>상품등록</div>
         <div onClick={handleSellerProductClick} style={{ cursor: "pointer", color: "white" }}>상품수정</div>
         <div onClick={handleSellerProductClick} style={{ cursor: "pointer", color: "white" }}>상품통계</div>
       </section>
