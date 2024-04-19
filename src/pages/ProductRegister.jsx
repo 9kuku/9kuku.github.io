@@ -37,7 +37,7 @@ const ProductRegistration = () => {
     fetchSellerId();
   }, []);
 
-  const handleSubmit = async (event) => {
+  const handleProductRegisterSubmit = async (event) => {
     event.preventDefault();
 
     const productData = {
@@ -71,7 +71,7 @@ const ProductRegistration = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleProductRegisterSubmit}>
       <label>
         Product Name:
         <input type="text" value={productName} onChange={e => setProductName(e.target.value)} />
