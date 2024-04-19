@@ -15,6 +15,7 @@ import Events from "./pages/Events";
 import SellersProducts from "./pages/SellersProducts";
 import ProductRegister from "./pages/ProductRegister";
 import SellerApplication from "./pages/SellerApplication";
+import Me from "./pages/Me";
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
       <Route path="/events/allevents" element={<AllEvents />} />
 
       <Route path="/users" element={<Users />} />
-
+      <Route path="/users/me" element={<Me />} />
       <Route path="/sellers" element={<Sellers />} />
 
       <Route path="/orders" element={<Orders />} />

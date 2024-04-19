@@ -45,26 +45,35 @@ const SellerApplication = () => {
 
   return (
     <form onSubmit={handleSellerApplicationSubmit}>
-      <label>
+      <label style={{ color: "white" }}>
         Brand Name:
         <input type="text" value={brandName} onChange={e => setBrandName(e.target.value)} />
       </label>
-      <label>
+      <br />
+      <br />
+      <label style={{ color: "white" }}>
         Domain Name:
         <textarea value={domainName} onChange={e => setDomainName(e.target.value)} />
       </label>
-      <label>
+      <br />
+      <br />
+      <label style={{ color: "white" }}>
         Introduce:
         <input type="number" value={introduce} onChange={e => setIntroduce(e.target.value)} />
       </label>
-      <label>
+      <br />
+      <br />
+      <label style={{ color: "white" }}>
         Email:
         <input type="number" value={email} onChange={e => setEmail(e.target.value)} />
       </label>
-      <label>
+      <br />
+      <br />
+      <label style={{ color: "white" }}>
         PhoneNumber:
         <input type="number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
       </label>
+      <br /><br />
       <button type="submit">Submit</button>
     </form>
   );

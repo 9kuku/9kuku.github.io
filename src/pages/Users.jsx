@@ -16,11 +16,14 @@ const Products = () => {
   function handleSellerProductClick() {
     navigate("/sellerproducts");
   }
+  function handleMeClick() {
+    navigate("/users/me");
+  }
   return (
     <>
       <section css={mainContainer}>
         <div onClick={handleSellerRegisterClick} style={{ cursor: "pointer", color: "white" }}>셀러등록</div>
-        <div onClick={handleSellerProductClick} style={{ cursor: "pointer", color: "white" }}>회원조회</div>
+        <div onClick={handleMeClick} style={{ cursor: "pointer", color: "white" }}>회원조회</div>
         <div onClick={handleSellerProductClick} style={{ cursor: "pointer", color: "white" }}>비밀번호수정</div>
       </section>
     </>

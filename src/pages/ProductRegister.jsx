@@ -72,19 +72,25 @@ const ProductRegistration = () => {
 
   return (
     <form onSubmit={handleProductRegisterSubmit}>
-      <label>
+      <label style={{ color: "white" }}>
         Product Name:
         <input type="text" value={productName} onChange={e => setProductName(e.target.value)} />
       </label>
-      <label>
+      <br />
+      <br />
+      <label style={{ color: "white" }}>
         Product Description:
         <textarea value={productDescription} onChange={e => setProductDescription(e.target.value)} />
       </label>
-      <label>
+      <br />
+      <br />
+      <label style={{ color: "white" }}>
         Product Price:
         <input type="number" value={productPrice} onChange={e => setProductPrice(e.target.value)} />
       </label>
-      <label>
+      <br />
+      <br />
+      <label style={{ color: "white" }}>
         Product Quantity:
         <input type="number" value={productQuantity} onChange={e => setProductQuantity(e.target.value)} />
       </label>

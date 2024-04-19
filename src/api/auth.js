@@ -7,6 +7,13 @@ export const loginApi = async (email, password) => {
 export const signUpApi = async (realName, email, password) => {
   return apiClient.post("/api/v1/users/signup", { realName,email, password });
 };
+export const getMeApi = async () => {
+  return apiClient.get("/api/v1/users/me", {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('Authorization')}`,
+    },
+  });
+};
 export const verifyTokenApi = (token) => {
   // Your code to verify the token goes here.
   // This is just a placeholder and will not actually verify a token.
