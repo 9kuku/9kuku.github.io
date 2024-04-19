@@ -13,6 +13,7 @@ import Coupons from "./pages/Coupons";
 import AllProducts from "./pages/AllProducts";
 import Events from "./pages/Events";
 import SellersProducts from "./pages/SellersProducts";
+import ProductRegister from "./pages/ProductRegister";
 
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
       <Route path="/orders" element={<Orders />} />
 
       <Route path="/coupons" element={<Coupons />} />
+
+      <Route path="/seller/product-register" element={<ProductRegister />} />
 
     </Routes>
   );
