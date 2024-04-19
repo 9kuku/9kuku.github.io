@@ -14,6 +14,7 @@ import AllProducts from "./pages/AllProducts";
 import Events from "./pages/Events";
 import SellersProducts from "./pages/SellersProducts";
 import ProductRegister from "./pages/ProductRegister";
+import SellerApplication from "./pages/SellerApplication";
 
 
 function App() {
@@ -44,6 +45,8 @@ function App() {
       <Route path="/coupons" element={<Coupons />} />
 
       <Route path="/seller/product-register" element={<ProductRegister />} />
+
+      <Route path="/users/seller-application" element={<SellerApplication />} />
 
     </Routes>
   );
