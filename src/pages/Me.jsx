@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { getAllProductApi } from "../api/products";
 import { getMeApi } from "../api/auth"; // Assuming you are using axios for http requests
 
 const Me = () => {
