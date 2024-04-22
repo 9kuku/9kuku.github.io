@@ -8,7 +8,6 @@ const Me = () => {
     const getData = () => {
       getMeApi()
         .then((res) => {
-          console.log(res);
           setUserInfo(res.data);
         })
         .catch((err) => {
