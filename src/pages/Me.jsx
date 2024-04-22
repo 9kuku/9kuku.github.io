@@ -8,8 +8,8 @@ const Me = () => {
     const getData = () => {
       getMeApi()
         .then((res) => {
+          console.log(res);
           setUserInfo(res.data);
-          console.log(res.data);
         })
         .catch((err) => {
           throw new Error(err);

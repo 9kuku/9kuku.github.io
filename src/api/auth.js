@@ -10,7 +10,7 @@ export const signUpApi = async (realName, email, password) => {
 export const getMeApi = async () => {
   return apiClient.get("/api/v1/users/me", {
     headers: {
-      Authorization: `Bearer ${localStorage.getItem('Authorization')}`,
+      'Authorization': `${localStorage.getItem('Authorization')}`,
     },
   });
 };
