@@ -14,7 +14,6 @@ const EventsItem = ({ event }) => {
           'Authorization': `${localStorage.getItem('Authorization')}`,
         },
       });
-      console.log(response);
       console.log(response.data);
       alert('쿠폰이 성공적으로 발급되었습니다.');
     } catch (error) {

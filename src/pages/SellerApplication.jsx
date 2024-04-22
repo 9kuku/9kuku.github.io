@@ -24,7 +24,8 @@ const SellerApplication = () => {
     try {
       const response = await axios.post('/api/v1/users/seller-application', sellerData, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('Authorization')}`,
+          'Content-Type' : 'application/json',
+          'Authorization': `${localStorage.getItem('Authorization')}`,
         },
       });
       console.log(response.data);
