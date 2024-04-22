@@ -16,7 +16,8 @@ const ProductRegistration = () => {
       try {
         const response = await axios.get('/api/v1/sellers/seller-check', {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem('Authorization')}`,
+            'Content-Type' : 'application/json',
+            'Authorization': `${localStorage.getItem('Authorization')}`,
           },
         });
         setSellerId(response.data.sellerId);
@@ -51,7 +52,8 @@ const ProductRegistration = () => {
     try {
       const response = await axios.post('/api/v1/sellers/products', productData, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('Authorization')}`,
+          'Content-Type' : 'application/json',
+          'Authorization': `${localStorage.getItem('Authorization')}`,
         },
       });
       console.log(response.data);
