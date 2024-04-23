@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const OrdersItem = ({ order }) => {
-  console.log(order);
   return (
     <div >
       <h2 >{order.orderId}</h2>
