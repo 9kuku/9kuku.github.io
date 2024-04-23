@@ -16,12 +16,19 @@ import SellersProducts from "./pages/SellersProducts";
 import ProductRegister from "./pages/ProductRegister";
 import SellerApplication from "./pages/SellerApplication";
 import Me from "./pages/Me";
+import LoginHandeler from "./component/auth/login/LoginHandeler";
 
 
 function App() {
   return (
     <Routes basename={process.env.PUBLIC_URL}>
       <Route path="/" element={<Auth />} />
+
+      <Route
+        path="/auth/kakao/callback"
+        element={<LoginHandeler />}
+      />
+
       <Route
         path="/main"
         element={
