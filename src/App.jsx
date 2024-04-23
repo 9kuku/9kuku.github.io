@@ -13,7 +13,10 @@ import Coupons from "./pages/Coupons";
 import AllProducts from "./pages/AllProducts";
 import Events from "./pages/Events";
 import SellersProducts from "./pages/SellersProducts";
-import ProductRegister from "./pages/ProductRegister";
+import ProductRegist from "./pages/ProductRegist";
+import ProductUpdate from "./pages/ProductUpdate";
+import ProductStatistics from "./pages/ProductStatistics";
+import ProductSearch from "./pages/ProductSearch";
 import SellerApplication from "./pages/SellerApplication";
 import Me from "./pages/Me";
 import LoginHandeler from "./component/auth/login/LoginHandeler";
@@ -78,7 +81,10 @@ function App() {
 
       <Route path="/coupons" element={<Coupons />} />
 
-      <Route path="/seller/product-regist" element={<ProductRegister />} />
+      <Route path="/seller/product-regist" element={<ProductRegist />} />
+      <Route path="/seller/product-update" element={<ProductUpdate />} />
+      <Route path="/seller/product-statistics" element={<ProductStatistics />} />
+      <Route path="/seller/product-search" element={<ProductSearch />} />
 
       <Route path="/users/seller-application" element={<SellerApplication />} />
     </Routes>

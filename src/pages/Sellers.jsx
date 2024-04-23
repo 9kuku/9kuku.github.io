@@ -7,7 +7,7 @@ import { getAllProductApi } from "../api/products";
 import ProductContextWrapper from "../context/ProductsContext";
 import ProductsList from "../component/itemList/products";
 import { useNavigate } from "react-router-dom";
-import seller from "./css/seller.module.css";
+import seller from "./css/Seller.module.css";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Products = () => {
     navigate("/seller/product-statistics")
   }
   function handleProductSearchClick() {
-    navigate("seller/product-search")
+    navigate("/seller/product-search")
   }
   return (
     <>

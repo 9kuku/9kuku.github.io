@@ -12,7 +12,7 @@
 
 .label {
   font-size: 35px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 0, 0.9);
   font-weight: bold;
   padding: 10px;
 
@@ -24,6 +24,8 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
+  margin: 20px;
 
   display: flex;
   align-items: center;
@@ -39,8 +41,6 @@
   background-repeat: no-repeat;
 
   margin: 20px;
-  border: 1px solid;
-  border-radius: 20px;
 
   display: flex;
   align-items: center;
@@ -56,8 +56,6 @@
   background-repeat: no-repeat;
 
   margin: 20px;
-  border: 1px solid;
-  border-radius: 20px;
 
   display: flex;
   align-items: center;
@@ -73,8 +71,6 @@
   background-repeat: no-repeat;
 
   margin: 20px;
-  border: 1px solid;
-  border-radius: 20px;
 
   display: flex;
   align-items: center;

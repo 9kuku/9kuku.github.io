@@ -23,11 +23,13 @@ const SellerApplication = () => {
 
     try {
       const response = await axios.post('/api/v1/users/seller-application', sellerData, {
+        baseURL: process.env.REACT_APP_API_URL,
         headers: {
           'Content-Type' : 'application/json',
           'Authorization': `${localStorage.getItem('Authorization')}`,
         },
       });
+      console.log(response);
       navigate('/');
     } catch (error) {
       if (error.response) {
@@ -59,13 +61,13 @@ const SellerApplication = () => {
       <br />
       <label style={{ color: "white" }}>
         Introduce:
-        <input type="number" value={introduce} onChange={e => setIntroduce(e.target.value)} />
+        <input type="text" value={introduce} onChange={e => setIntroduce(e.target.value)} />
       </label>
       <br />
       <br />
       <label style={{ color: "white" }}>
         Email:
-        <input type="number" value={email} onChange={e => setEmail(e.target.value)} />
+        <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
       </label>
       <br />
       <br />

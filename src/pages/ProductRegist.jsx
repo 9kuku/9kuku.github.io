@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import productRegist from './css/ProductUpdate.module.css';
+import productRegist from './css/ProductRegist.module.css';
 
-const ProductUpdate = () => {
+const ProductRegistration = () => {
   const [productName, setProductName] = useState('');
   const [productDescription, setProductDescription] = useState('');
   const [productPrice, setProductPrice] = useState('');
@@ -103,4 +103,4 @@ const ProductUpdate = () => {
   );
 };
 
-export default ProductUpdate;
+export default ProductRegistration;

@@ -1,7 +1,7 @@
 .container {
     display: grid;
 
-    width: 1000px;
+    width: 500px;
     height: 800px;
     background-color: purple;
   
@@ -35,6 +35,11 @@ input {
     height: 80px;
     margin-left: 10px;
     margin-right: 10px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
 }
 
 textarea {
@@ -43,6 +48,11 @@ textarea {
     margin-left: 10px;
     margin-right: 10px;
     resize: none;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
 }
 
 textarea::placeholder {
@@ -77,4 +87,5 @@ textarea::placeholder {
     font-weight: bold;
     padding: 10px;
 
+    cursor: pointer;
 }
