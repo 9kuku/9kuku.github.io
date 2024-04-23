@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -8,14 +8,12 @@ const LoginHandler = () => {
 
   useEffect(() => {
     if (code) {
-      console.log("code:", code);
       kakaoLogin();
     }
   }, [code, navigate]);
 
   const kakaoLogin = async () => {
     try {
-      console.log("Sending request with code:", code);
       const response = await axios.get(`https://9oods.store/api/v1/auth/kakao/callback?code=${code}`, {
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -29,6 +27,10 @@ const LoginHandler = () => {
       navigate("/main");
     } catch (error) {
       console.error("로그인 에러:", error);
+
+      alert("로그인 중 오류가 발생했습니다. 재 시도 또는다른 방식의 로그인으로 접속해주세요.");
+
+      navigate("/")
       // 에러 처리를 원하는 방식으로 추가하세요.
     }
   };
