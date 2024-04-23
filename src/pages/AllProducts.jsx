@@ -18,7 +18,6 @@ const AllProducts = () => {
       getAllProductApi()
         .then((res) => {
           setProductData(res.data);
-          console.log(res.data);
         })
         .catch((err) => {
           throw new Error(err);
