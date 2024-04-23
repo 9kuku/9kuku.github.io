@@ -16,7 +16,7 @@ const LoginHandler = () => {
   const kakaoLogin = async () => {
     try {
       console.log("Sending request with code:", code);
-      const response = await axios.get(`http://34.47.69.214:8080/api/v1/auth/kakao/callback?code=${code}`, {
+      const response = await axios.get(`https://9oods.store/api/v1/auth/kakao/callback?code=${code}`, {
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
