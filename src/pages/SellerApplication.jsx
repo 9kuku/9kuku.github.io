@@ -28,7 +28,6 @@ const SellerApplication = () => {
           'Authorization': `${localStorage.getItem('Authorization')}`,
         },
       });
-      console.log(response.data);
       navigate('/');
     } catch (error) {
       if (error.response) {

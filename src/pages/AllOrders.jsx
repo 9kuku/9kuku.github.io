@@ -16,7 +16,6 @@ const AllOrders = () => {
       getAllOrderApi()
         .then((res) => {
           setOrderData(res.data);
-          console.log(res.data);
         })
         .catch((err) => {
           throw new Error(err);
