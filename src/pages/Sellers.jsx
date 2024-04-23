@@ -7,22 +7,34 @@ import { getAllProductApi } from "../api/products";
 import ProductContextWrapper from "../context/ProductsContext";
 import ProductsList from "../component/itemList/products";
 import { useNavigate } from "react-router-dom";
+import seller from "./css/seller.module.css";
 
 const Products = () => {
   const navigate = useNavigate();
   function handleProductRegisterClick() {
-    navigate("/seller/product-register");
+    navigate("/seller/product-regist");
   }
-  function handleSellerProductClick() {
-    navigate("/sellerproducts");
+  function handleProductUpdateClick() {
+    navigate("/seller/product-update");
+  }
+  function handleProductStatisticsClick() {
+    navigate("/seller/product-statistics")
+  }
+  function handleProductSearchClick() {
+    navigate("seller/product-search")
   }
   return (
     <>
-      <section css={mainContainer}>
-        <div onClick={handleProductRegisterClick} style={{ cursor: "pointer", color: "white" }}>상품등록</div>
-        <div onClick={handleSellerProductClick} style={{ cursor: "pointer", color: "white" }}>상품수정</div>
-        <div onClick={handleSellerProductClick} style={{ cursor: "pointer", color: "white" }}>상품통계</div>
-      </section>
+    <div className={seller.container}>
+      <div className={seller.create} onClick={handleProductRegisterClick} >
+        <span className={seller.label}>상품등록</span>
+      </div>
+      <div className={seller.update} onClick={handleProductUpdateClick} >
+        <span className={seller.label}>상품수정</span>
+      </div>
+            <div className={seller.statistics} onClick={handleProductStatisticsClick} >상품통계</div>
+            <div className={seller.search} onClick={handleProductSearchClick}>상품 검색</div>
+    </div>
     </>
   );
 };

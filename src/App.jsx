@@ -45,7 +45,7 @@ function App() {
 
       <Route path="/coupons" element={<Coupons />} />
 
-      <Route path="/seller/product-register" element={<ProductRegister />} />
+      <Route path="/seller/product-regist" element={<ProductRegister />} />
 
       <Route path="/users/seller-application" element={<SellerApplication />} />
 

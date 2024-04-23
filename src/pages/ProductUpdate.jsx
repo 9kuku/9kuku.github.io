@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import productRegist from './css/productRegist.module.css';
 
-const ProductRegistration = () => {
+const ProductUpdate = () => {
   const [sellerId, setSellerId] = useState(null);
   const [productName, setProductName] = useState('');
   const [productDescription, setProductDescription] = useState('');
@@ -50,7 +50,7 @@ const ProductRegistration = () => {
     };
 
     try {
-      const response = await axios.post('/api/v1/sellers/products', productData, {
+      const response = await axios.patch('/api/v1/sellers/products', productData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('Authorization')}`,
         },
@@ -121,4 +121,4 @@ const ProductRegistration = () => {
   );
 };
 
-export default ProductRegistration;
+export default ProductUpdate;

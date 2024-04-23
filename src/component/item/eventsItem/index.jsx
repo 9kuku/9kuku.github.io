@@ -7,6 +7,7 @@ import React from 'react';
 const EventsItem = ({ event }) => {
   const issueCoupon = async () => {
     try {
+      console.log(`${event.coupon.couponId}`);
       const response = await axios.patch(`/api/v1/coupons/${event.coupon.couponId}/issued-coupons`);
       console.log(response.data);
       alert('쿠폰이 성공적으로 발급되었습니다.');
