@@ -6,8 +6,8 @@ const ProductRegistration = () => {
   const [sellerId, setSellerId] = useState(null);
   const [productName, setProductName] = useState('');
   const [productDescription, setProductDescription] = useState('');
-  const [productPrice, setProductPrice] = useState(0);
-  const [productQuantity, setProductQuantity] = useState(0);
+  const [productPrice, setProductPrice] = useState(''); // Changed to string
+  const [productQuantity, setProductQuantity] = useState(''); // Changed to string
   const navigate = useNavigate();
 
   // 로그인한 사용자의 엑세스 토큰을 사용하여 sellerId를 가져옵니다.
@@ -45,8 +45,8 @@ const ProductRegistration = () => {
       sellerId,
       productName,
       productDescription,
-      productPrice,
-      productQuantity,
+      productPrice: parseFloat(productPrice), // Convert to number
+      productQuantity: parseInt(productQuantity), // Convert to number
     };
 
     try {
@@ -88,13 +88,13 @@ const ProductRegistration = () => {
       <br />
       <label style={{ color: "white" }}>
         Product Price:
-        <input type="number" value={productPrice} onChange={e => setProductPrice(e.target.value)} />
+        <input type="text" value={productPrice} onChange={e => setProductPrice(e.target.value)} /> {/* Changed to text input */}
       </label>
       <br />
       <br />
       <label style={{ color: "white" }}>
         Product Quantity:
-        <input type="number" value={productQuantity} onChange={e => setProductQuantity(e.target.value)} />
+        <input type="text" value={productQuantity} onChange={e => setProductQuantity(e.target.value)} /> {/* Changed to text input */}
       </label>
       <button type="submit">Submit</button>
     </form>
