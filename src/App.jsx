@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Auth from "./pages/Auth";
 import { lazy, Suspense } from "react";
 import "react-toastify/dist/ReactToastify.css";
@@ -21,7 +21,8 @@ import LoginHandeler from "./component/auth/login/LoginHandeler";
 
 function App() {
   return (
-    <Routes basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Routes>
       <Route path="/" element={<Auth />} />
 
       <Route
@@ -57,6 +58,7 @@ function App() {
       <Route path="/users/seller-application" element={<SellerApplication />} />
 
     </Routes>
+    </BrowserRouter>
   );
 }
 
