@@ -17,9 +17,34 @@ import ProductRegister from "./pages/ProductRegister";
 import SellerApplication from "./pages/SellerApplication";
 import Me from "./pages/Me";
 import LoginHandeler from "./component/auth/login/LoginHandeler";
+import AllOrders from "./pages/AllOrders";
 
 
 function App() {
+  console.log("   999999999999999999\n"+
+    "  99999999999999999999\n"+
+    "999999            999999\n"+
+    "9999                9999\n"+
+    "9999                9999\n"+
+    "9999                9999\n"+
+    "9999                9999\n"+
+    "9999                9999\n"+
+    "9999                9999\n"+
+    "9999                9999\n"+
+    "9999                9999\n"+
+    "9999                9999\n"+
+    "  9999999999999999999999\n"+
+    "   999999999999999999999\n"+
+    "                    9999\n"+
+    "                    9999\n"+
+    "                    9999\n"+
+    "                    9999\n"+
+    "                    9999\n"+
+    "                    9999\n"+
+    "                    9999\n"+
+    "                  999999\n"+
+    "   9999999999999999999\n"+
+    "   99999999999999999\n");
   return (
     <Routes basename={process.env.PUBLIC_URL}>
       <Route path="/" element={<Auth />} />
@@ -49,6 +74,7 @@ function App() {
       <Route path="/sellers" element={<Sellers />} />
 
       <Route path="/orders" element={<Orders />} />
+      <Route path="/orders/allorders" element={<AllOrders />} />
 
       <Route path="/coupons" element={<Coupons />} />
 
