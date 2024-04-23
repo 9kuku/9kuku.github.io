@@ -1,11 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useEffect, useState } from "react";
-import ProductList from "../component/itemList/products";
-import useAuth from "../hooks/useAuth";
 import { mainContainer } from "../shared/globalStyle";
-import { getAllProductApi } from "../api/products";
-import ProductContextWrapper from "../context/ProductsContext";
-import ProductsList from "../component/itemList/products";
 import { useNavigate } from "react-router-dom";
 
 const Products = () => {

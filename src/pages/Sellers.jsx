@@ -32,8 +32,12 @@ const Products = () => {
       <div className={seller.update} onClick={handleProductUpdateClick} >
         <span className={seller.label}>상품수정</span>
       </div>
-            <div className={seller.statistics} onClick={handleProductStatisticsClick} >상품통계</div>
-            <div className={seller.search} onClick={handleProductSearchClick}>상품 검색</div>
+      <div className={seller.statistics} onClick={handleProductStatisticsClick} >
+        <span className={seller.label}>상품통계</span>
+      </div>
+      <div className={seller.search} onClick={handleProductSearchClick}>
+        <span className={seller.label}>상품검색</span>
+      </div>
     </div>
     </>
   );
