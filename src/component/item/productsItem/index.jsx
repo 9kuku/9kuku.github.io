@@ -1,16 +1,23 @@
 import axios from "axios";
+import { useState } from "react";
 import { productItemStyle, productItemNameStyle, productItemPriceStyle } from "./style";
+import Modal from 'react-modal';
 
+Modal.setAppElement('#root');
 const ProductsItem = ({ product }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [address, setAddress] = useState("");
+
   const handleBuyClick = async () => {
     const order = {
       products: [
         {
           productId: product.productId,
-          quantity: 1 // 수량은 원하는대로 설정하세요.
+          quantity: quantity
         }
       ],
-      address: "경기도 안산시 상록구 사동" // 주소는 원하는대로 설정하세요.
+      address: address
     };
 
     try {
@@ -19,6 +26,7 @@ const ProductsItem = ({ product }) => {
           "Authorization": `${localStorage.getItem("Authorization")}`
         },
       });
+      setModalIsOpen(false);
     } catch (error) {
       console.error("Failed to place order:", error);
     }
@@ -29,7 +37,19 @@ const ProductsItem = ({ product }) => {
       <h2 css={productItemNameStyle}>{product.productId}</h2>
       <h2 css={productItemNameStyle}>{product.productName}</h2>
       <p css={productItemPriceStyle}>{product.productPrice}</p>
-      <button onClick={handleBuyClick}>구매하기</button>
+      <button onClick={() => setModalIsOpen(true)}>구매하기</button>
+      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+        <h2>{product.productName}</h2>
+        <p>{product.productPrice}</p>
+        <a>수량  </a>
+        <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} placeholder="수량" />
+        <br />
+        <a>주소  </a>
+        <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="주소" />
+        <br />
+        <button onClick={handleBuyClick}>주문하기</button>
+        <button onClick={() => setModalIsOpen(false)}>닫기</button>
+      </Modal>
     </div>
   );
 };
