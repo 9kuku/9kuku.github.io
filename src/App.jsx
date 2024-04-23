@@ -21,7 +21,8 @@ import LoginHandeler from "./component/auth/login/LoginHandeler";
 
 function App() {
   return (
-    <Routes basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Routes>
       <Route path="/" element={<Auth />} />
 
       <Route
@@ -57,6 +58,7 @@ function App() {
       <Route path="/users/seller-application" element={<SellerApplication />} />
 
     </Routes>
+    </BrowserRouter>
   );
 }
 
