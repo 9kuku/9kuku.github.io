@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { apiClient } from "../api/client";
 
 const ProductRegistration = () => {
   const [sellerId, setSellerId] = useState(null);
@@ -14,7 +15,7 @@ const ProductRegistration = () => {
   useEffect(() => {
     const fetchSellerId = async () => {
       try {
-        const response = await axios.get('/api/v1/sellers/seller-check', {
+        const response = await apiClient.get('/api/v1/sellers/seller-check', {
           headers: {
             'Content-Type' : 'application/json',
             'Authorization': `${localStorage.getItem('Authorization')}`,
@@ -50,7 +51,7 @@ const ProductRegistration = () => {
     };
 
     try {
-      const response = await axios.post('/api/v1/sellers/products', productData, {
+      const response = await apiClient.post('/api/v1/sellers/products', productData, {
         headers: {
           'Content-Type' : 'application/json',
           'Authorization': `${localStorage.getItem('Authorization')}`,
