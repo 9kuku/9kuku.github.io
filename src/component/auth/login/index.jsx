@@ -5,7 +5,15 @@ import { loginApi } from "../../../api/auth";
 import notice from "../../../utils/noticeUtils";
 import useSignForm from "../../../hooks/useSignForm";
 import * as authSytle from "../authStyle";
+import { buttonCss } from "../authStyle";
 import { LoginContainer, loginErrorWrapper, loginLabelCss } from "./style";
+import { KAKAO_AUTH_URL } from "./OAuth";
+import kakologin from "./kakaologin.png";
+import styled from "@emotion/styled";
+
+const KakaoButton = styled.a`
+  ${buttonCss}
+`;
 
 const Login = ({ isShown, onOpen }) => {
   const navigate = useNavigate();
@@ -17,6 +25,10 @@ const Login = ({ isShown, onOpen }) => {
     passwordIsAbled,
     passwordWarnList,
   } = useSignForm();
+
+  const handleKakaoLogin = () => {
+    window.location.href = KAKAO_AUTH_URL;
+  };
 
   const handleLoginClick = () => {
     loginApi(userInfo.email, userInfo.password)
@@ -67,6 +79,9 @@ const Login = ({ isShown, onOpen }) => {
         >
           Login
         </authSytle.AuthButton>
+        <KakaoButton onClick={handleKakaoLogin} className={"kakaobtn"}>
+          <img src={kakologin} />
+        </KakaoButton>
       </LoginContainer>
       <ToastContainer position="top-right" />
     </>

@@ -3,11 +3,12 @@ import CouponItem from "../couponItem";
 import EventProductItem from "../EventCouponItem";
 import axios from 'axios';
 import React from 'react';
+import { type } from "@testing-library/user-event/dist/type";
 
 const EventsItem = ({ event }) => {
   const issueCoupon = async () => {
     try {
-      const response = await axios.patch(`https://9oods.store/api/v1/coupons/${event.coupon.couponId}/issued-coupons`,null , {
+      const response = await axios.patch(`/api/v1/coupons/${event.coupon.couponId}/issued-coupons`,null , {
         headers: {
           'Content-Type' : 'application/json',
           'Authorization': `${localStorage.getItem('Authorization')}`,

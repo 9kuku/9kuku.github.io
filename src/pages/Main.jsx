@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom";
 
 const Main = () => {
+
   const navigate = useNavigate();
 
   const handleProductClick = () => {
@@ -29,6 +30,7 @@ const Main = () => {
 
   return (
     <>
+      {}
       <div onClick={handleUserClick} style={{ cursor: "pointer", color: "white"}}> 회원</div>
       <div onClick={handleSellerClick} style={{ cursor: "pointer", color: "white"}}> 셀러</div>
       <div onClick={handleOrderClick} style={{ cursor: "pointer", color: "white"}}> 주문</div>

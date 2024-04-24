@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Products = () => {
   const navigate = useNavigate();
   function handleAllProductClick() {
-    navigate("/products/allProducts");
+    navigate("/orders/allorders");
   }
   function handleSellerProductClick() {
     navigate("/sellerproducts");

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { apiClient } from "../api/client";
 
 const SellerApplication = () => {
   const [brandName, setBrandName] = useState('');
@@ -22,13 +23,14 @@ const SellerApplication = () => {
     };
 
     try {
-      const response = await axios.post('/api/v1/users/seller-application', sellerData, {
+      const response = await apiClient.post('/api/v1/users/seller-application', sellerData, {
         headers: {
           'Content-Type' : 'application/json',
           'Authorization': `${localStorage.getItem('Authorization')}`,
         },
       });
-      console.log(response.data);
+      alert("셀러등록이 완료되었습니다. 재로그인 해주세요.");
+      localStorage.removeItem('Authorization');
       navigate('/');
     } catch (error) {
       if (error.response) {
