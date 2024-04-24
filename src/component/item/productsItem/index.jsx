@@ -21,7 +21,7 @@ const ProductsItem = ({ product }) => {
     };
 
     try {
-      const response = await axios.post("https://9oods.store/api/v1/orders", order, {
+      const response = await axios.post("/api/v1/orders", order, {
         headers: {
           "Authorization": `${localStorage.getItem("Authorization")}`
         },

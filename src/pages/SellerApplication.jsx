@@ -61,7 +61,7 @@ const SellerApplication = () => {
       <br />
       <label style={{ color: "white" }}>
         Introduce:
-        <input type="text" value={introduce} onChange={e => setIntroduce(e.target.value)} />
+        <textarea value={introduce} onChange={e => setIntroduce(e.target.value)} />
       </label>
       <br />
       <br />
@@ -73,7 +73,7 @@ const SellerApplication = () => {
       <br />
       <label style={{ color: "white" }}>
         PhoneNumber:
-        <input type="number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
+        <input type="text" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
       </label>
       <br /><br />
       <button type="submit">Submit</button>

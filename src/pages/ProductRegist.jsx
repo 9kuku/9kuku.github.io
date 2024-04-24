@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import productRegist from './css/ProductRegist.module.css';
+import { createProductApi } from '../api/sellers';
+import notice from '../utils/noticeUtils';
 
-const ProductRegistration = () => {
+const ProductRegist = () => {
   const [productName, setProductName] = useState('');
   const [productDescription, setProductDescription] = useState('');
   const [productPrice, setProductPrice] = useState('');
@@ -27,11 +29,18 @@ const ProductRegistration = () => {
           'Content-Type' : 'application/json',
           'Authorization': `${localStorage.getItem('Authorization')}`,
         },
-      }).then(() => {
+      })
+      // createProductApi(
+      //   productData.productName,
+      //   productData.productDescription,
+      //   productData.productPrice,
+      //   productData.productQuantity)
+      .then(() => {
         alert("상품 등록 성공");
+        notice("success", "상품 등록 성공");
       });
       navigate('/sellers');
-    } catch (error) {
+      } catch (error) {
       if (error.response) {
         // 서버에서 ApiException을 통해 에러 메시지를 전달한 경우
         console.error(`Error! HTTP Status: ${error.response.status}, Message: ${error.response.data.message}`);
@@ -103,4 +112,4 @@ const ProductRegistration = () => {
   );
 };
 
-export default ProductRegistration;
+export default ProductRegist;

@@ -8,8 +8,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "http://localhost:8080",
-  // "start_url": "https://9oods.store",
+  "start_url": "https://9oods.store",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
