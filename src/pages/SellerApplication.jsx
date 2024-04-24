@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { apiClient } from "../api/client";
 
 const SellerApplication = () => {
   const [brandName, setBrandName] = useState('');
@@ -22,14 +23,12 @@ const SellerApplication = () => {
     };
 
     try {
-      const response = await axios.post('/api/v1/users/seller-application', sellerData, {
-        baseURL: process.env.REACT_APP_API_URL,
+      const response = await apiClient.post('/api/v1/users/seller-application', sellerData, {
         headers: {
           'Content-Type' : 'application/json',
           'Authorization': `${localStorage.getItem('Authorization')}`,
         },
       });
-      console.log(response);
       navigate('/');
     } catch (error) {
       if (error.response) {

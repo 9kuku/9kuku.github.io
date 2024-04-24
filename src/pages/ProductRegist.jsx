@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import productRegist from './css/ProductRegist.module.css';
-import { createProductApi } from '../api/sellers';
 import notice from '../utils/noticeUtils';
+import { apiClient } from '../api/client';
 
 const ProductRegist = () => {
   const [productName, setProductName] = useState('');
@@ -23,21 +22,14 @@ const ProductRegist = () => {
     };
 
     try {
-      const response = await axios.post('/api/v1/sellers/products', productData, {
-        baseURL: process.env.REACT_APP_API_URL,
+      const response = await apiClient.post('/api/v1/sellers/products', productData, {
         headers: {
           'Content-Type' : 'application/json',
           'Authorization': `${localStorage.getItem('Authorization')}`,
         },
       })
-      // createProductApi(
-      //   productData.productName,
-      //   productData.productDescription,
-      //   productData.productPrice,
-      //   productData.productQuantity)
       .then(() => {
         alert("상품 등록 성공");
-        notice("success", "상품 등록 성공");
       });
       navigate('/sellers');
       } catch (error) {
