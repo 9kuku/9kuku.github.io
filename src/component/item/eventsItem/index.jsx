@@ -4,11 +4,12 @@ import EventProductItem from "../EventCouponItem";
 import axios from 'axios';
 import React from 'react';
 import { type } from "@testing-library/user-event/dist/type";
+import { apiClient } from "../../../api/client";
 
 const EventsItem = ({ event }) => {
   const issueCoupon = async () => {
     try {
-      const response = await axios.patch(`/api/v1/coupons/${event.coupon.couponId}/issued-coupons`,null , {
+      const response = apiClient.patch(`/api/v1/coupons/${event.couponId}/issued-coupons`,null , {
         headers: {
           'Content-Type' : 'application/json',
           'Authorization': `${localStorage.getItem('Authorization')}`,
@@ -27,7 +28,8 @@ const EventsItem = ({ event }) => {
       <h2 css={eventItemNameStyle}>{event.title}</h2>
       <h2 css={eventItemNameStyle}>{event.content}</h2>
       <h2 css={eventItemNameStyle}>{event.openAt}</h2>
-      <CouponItem coupon={event.coupon} />
+      <h2 css={eventItemNameStyle}>{event.expirationDate}</h2>
+      <h2 css={eventItemNameStyle}>{event.quantity}</h2>
       <button onClick={issueCoupon}>쿠폰 발급</button>
       {event.eventProducts.map((product, index) => (
         <EventProductItem key={index} product={product} />
