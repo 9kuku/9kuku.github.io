@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { productItemStyle, productItemNameStyle, productItemPriceStyle } from "./style";
 import Modal from 'react-modal';
+import { apiClient } from "../../../api/client";
 
 Modal.setAppElement('#root');
 const ProductsItem = ({ product }) => {
@@ -21,7 +22,7 @@ const ProductsItem = ({ product }) => {
     };
 
     try {
-      const response = await axios.post("/api/v1/orders", order, {
+      const response = await apiClient.post("/api/v1/orders", order, {
         headers: {
           "Authorization": `${localStorage.getItem("Authorization")}`
         },
