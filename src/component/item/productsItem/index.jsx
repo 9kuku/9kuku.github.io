@@ -17,7 +17,6 @@ const ProductsItem = ({ product }) => {
       const fetchProductDetail = async () => {
         const response = await apiClient.get(`/api/v1/sellers/${product.domainName}/products/${product.productId}`);
         setProductDetail(response.data);
-        console.log(response.data);
       };
 
       fetchProductDetail();
