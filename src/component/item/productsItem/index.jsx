@@ -15,7 +15,7 @@ const ProductsItem = ({ product }) => {
     if (modalIsOpen) {
       // 모달이 열릴 때 상품의 상세 정보를 가져옵니다.
       const fetchProductDetail = async () => {
-        const response = await apiClient.get(`https://9oods.store/api/v1/sellers/${product.domainName}/products/${product.productId}`);
+        const response = await apiClient.get(`/sellers/${product.domainName}/products/${product.productId}`);
         setProductDetail(response.data);
       };
 
