@@ -50,7 +50,7 @@ const ModifyPassword = () => {
      <p style={{color: "white"}}>새로운 비밀번호를 영어 소문자 및 대문자, 숫자, 특수문자를 사용하여 8자 이상 15자 이하로 입력해주세요. </p>
      <label style={{ color: "white" }}>
        새로운 비밀번호:
-       <textarea value={domainName} onChange={e => setNewPassword(e.target.value)} />
+       <textarea value={newPassword} onChange={e => setNewPassword(e.target.value)} />
      </label>
      <br /><br />
      <button type="submit">Submit</button>
