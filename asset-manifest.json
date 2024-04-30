@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "http://localhost:8080/static/css/main.bca20a1b.css",
-    "main.js": "http://localhost:8080/static/js/main.517550f6.js",
-    "static/media/Loading.gif": "http://localhost:8080/static/media/Loading.5e97fb27dd3cdded7fea.gif",
-    "static/media/update.png": "http://localhost:8080/static/media/update.f80d9b8801aa73cb506a.png",
-    "static/media/search.png": "http://localhost:8080/static/media/search.e4b050fd523682f5b612.png",
-    "index.html": "http://localhost:8080/index.html",
-    "main.bca20a1b.css.map": "http://localhost:8080/static/css/main.bca20a1b.css.map",
-    "main.517550f6.js.map": "http://localhost:8080/static/js/main.517550f6.js.map"
+    "main.css": "https://9oods.store/static/css/main.6a931203.css",
+    "main.js": "https://9oods.store/static/js/main.dcb0ebac.js",
+    "static/media/Loading.gif": "https://9oods.store/static/media/Loading.5e97fb27dd3cdded7fea.gif",
+    "static/media/update.png": "https://9oods.store/static/media/update.f80d9b8801aa73cb506a.png",
+    "static/media/search.png": "https://9oods.store/static/media/search.e4b050fd523682f5b612.png",
+    "index.html": "https://9oods.store/index.html",
+    "main.6a931203.css.map": "https://9oods.store/static/css/main.6a931203.css.map",
+    "main.dcb0ebac.js.map": "https://9oods.store/static/js/main.dcb0ebac.js.map"
   },
   "entrypoints": [
-    "static/css/main.bca20a1b.css",
-    "static/js/main.517550f6.js"
+    "static/css/main.6a931203.css",
+    "static/js/main.dcb0ebac.js"
   ]
 }
