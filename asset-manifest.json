@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "https://9oods.store/static/css/main.6a931203.css",
-    "main.js": "https://9oods.store/static/js/main.dcb0ebac.js",
+    "main.css": "https://9oods.store/static/css/main.aa32f029.css",
+    "main.js": "https://9oods.store/static/js/main.cf61931b.js",
     "static/media/Loading.gif": "https://9oods.store/static/media/Loading.5e97fb27dd3cdded7fea.gif",
     "static/media/update.png": "https://9oods.store/static/media/update.f80d9b8801aa73cb506a.png",
     "static/media/search.png": "https://9oods.store/static/media/search.e4b050fd523682f5b612.png",
     "index.html": "https://9oods.store/index.html",
-    "main.6a931203.css.map": "https://9oods.store/static/css/main.6a931203.css.map",
-    "main.dcb0ebac.js.map": "https://9oods.store/static/js/main.dcb0ebac.js.map"
+    "main.aa32f029.css.map": "https://9oods.store/static/css/main.aa32f029.css.map",
+    "main.cf61931b.js.map": "https://9oods.store/static/js/main.cf61931b.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a931203.css",
-    "static/js/main.dcb0ebac.js"
+    "static/css/main.aa32f029.css",
+    "static/js/main.cf61931b.js"
   ]
 }
