@@ -21,6 +21,7 @@ import SellerApplication from "./pages/SellerApplication";
 import Me from "./pages/Me";
 import LoginHandeler from "./component/auth/login/LoginHandeler";
 import AllOrders from "./pages/AllOrders";
+import ModifyPassword from "./pages/ModifyPassword";
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
 
       <Route path="/users" element={<Users />} />
       <Route path="/users/me" element={<Me />} />
+      <Route path="/users/update-password" element={<ModifyPassword />} />
       <Route path="/sellers" element={<Sellers />} />
 
       <Route path="/orders" element={<Orders />} />

@@ -1,12 +1,12 @@
-import axios from "axios";
+import React from 'react';
 
-const OrdersItem = ({ order }) => {
+const OrderItem = ({ order }) => {
   return (
-    <div >
-      <h2 >{order.orderId}</h2>
+    <div>
+      <h2>{order.orderId}</h2>
       <p>{order.address}</p>
-      <p>{order.orderDate}</p>
       <p>{order.orderStatus}</p>
+      <p>{order.orderDate}</p>
       {order.products.map((product, index) => (
         <div key={index}>
           <h3>{product.productName}</h3>
@@ -16,4 +16,5 @@ const OrdersItem = ({ order }) => {
     </div>
   );
 };
-export default OrdersItem;
+
+export default OrderItem; // default로 내보내기

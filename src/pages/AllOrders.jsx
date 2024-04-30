@@ -2,13 +2,12 @@
 import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { mainContainer } from "../shared/globalStyle";
-import OrderList from "../component/itemList/orders";
 import { getAllOrderApi } from "../api/orders";
 import OrderContextWrapper from "../context/OrdersContext";
+import OrderList from "../component/itemList/orders"; // 경로 수정
 
 const AllOrders = () => {
-  useAuth();
-
+  // useAuth();
   const [orderData, setOrderData] = useState();
 
   useEffect(() => {
@@ -19,7 +18,8 @@ const AllOrders = () => {
         })
         .catch((err) => {
           throw new Error(err);
-        });
+        })
+
     };
     getData();
   }, []);
@@ -28,10 +28,11 @@ const AllOrders = () => {
     <>
       <OrderContextWrapper>
         <section css={mainContainer}>
-          <OrderList fetchOrders={getAllOrderApi} orderData={orderData} />
+          <OrderList fetchOrders={getAllOrderApi} />
         </section>
       </OrderContextWrapper>
     </>
   );
 };
+
 export default AllOrders;
