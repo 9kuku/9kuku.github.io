@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import productRegist from './css/ProductRegist.module.css';
-import notice from '../utils/noticeUtils';
+import regist from './css/ProductRegist.module.css';
 import { apiClient } from '../api/client';
 
 const ProductRegist = () => {
@@ -55,9 +54,9 @@ const ProductRegist = () => {
 
   return (
     <>
-      <form className={productRegist.container} onSubmit={handleProductRegisterSubmit}>
-        <div className={productRegist.inputContainer}>
-          <span className={productRegist.label}>
+      <form className={regist.container} onSubmit={handleProductRegisterSubmit}>
+        <div className={regist.inputContainer}>
+          <span className={regist.label}>
             상품명
           </span>
           <input 
@@ -66,8 +65,8 @@ const ProductRegist = () => {
             onChange={e => setProductName(e.target.value)}
             placeholder='상품 이름을 입력하세요' />
         </div>
-        <div className={productRegist.inputContainer}>
-          <span className={productRegist.label}>
+        <div className={regist.inputContainer}>
+          <span className={regist.label}>
             상품 설명
           </span>
           <textarea
@@ -75,8 +74,8 @@ const ProductRegist = () => {
             onChange={e => setProductDescription(e.target.value)}
             placeholder='상품 설명을 입력하세요' />
         </div>
-        <div className={productRegist.inputContainer}>
-          <span className={productRegist.label}>
+        <div className={regist.inputContainer}>
+          <span className={regist.label}>
             상품 가격
           </span>
           <input 
@@ -85,8 +84,8 @@ const ProductRegist = () => {
             onChange={e => setProductPrice(e.target.value)}
             placeholder='상품 가격을 입력하세요' />
         </div>
-        <div className={productRegist.inputContainer}>
-          <span className={productRegist.label}>
+        <div className={regist.inputContainer}>
+          <span className={regist.label}>
             상품 수량
           </span>
           <input 
@@ -95,9 +94,9 @@ const ProductRegist = () => {
             onChange={e => setProductQuantity(e.target.value)}
             placeholder='상품 수량을 입력하세요' />
         </div>
-        <div className={productRegist.buttonContainer}>
-          <button className={productRegist.button} onClick={OnReset}>취소</button>
-          <button className={productRegist.button} type="submit">저장</button>
+        <div className={regist.buttonContainer}>
+          <button className={regist.button} onClick={OnReset}>취소</button>
+          <button className={regist.button} type="submit">저장</button>
         </div>
       </form>
     </>

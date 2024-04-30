@@ -8,9 +8,18 @@ import ProductContextWrapper from "../context/ProductsContext";
 import ProductsList from "../component/itemList/products";
 import { useNavigate } from "react-router-dom";
 import seller from "./css/Seller.module.css";
+import Loading from "./Loading";
 
 const Products = () => {
   const navigate = useNavigate();
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
+  //   return () => clearTimeout(timer);
+  // }, []);
   function handleProductRegisterClick() {
     navigate("/seller/product-regist");
   }
@@ -25,20 +34,24 @@ const Products = () => {
   }
   return (
     <>
-    <div className={seller.container}>
-      <div className={seller.create} onClick={handleProductRegisterClick} >
-        <span className={seller.label}>상품등록</span>
+    {/* {loading ? (
+      <Loading />
+    ) : ( */}
+      <div className={seller.container}>
+        <div className={seller.create} onClick={handleProductRegisterClick} >
+          <span className={seller.label}>상품등록</span>
+        </div>
+        <div className={seller.update} onClick={handleProductUpdateClick} >
+          <span className={seller.label}>상품수정</span>
+        </div>
+        <div className={seller.statistics} onClick={handleProductStatisticsClick} >
+          <span className={seller.label}>상품통계</span>
+        </div>
+        <div className={seller.search} onClick={handleProductSearchClick}>
+          <span className={seller.label}>상품검색</span>
+        </div>
       </div>
-      <div className={seller.update} onClick={handleProductUpdateClick} >
-        <span className={seller.label}>상품수정</span>
-      </div>
-      <div className={seller.statistics} onClick={handleProductStatisticsClick} >
-        <span className={seller.label}>상품통계</span>
-      </div>
-      <div className={seller.search} onClick={handleProductSearchClick}>
-        <span className={seller.label}>상품검색</span>
-      </div>
-    </div>
+      {/* )} */}
     </>
   );
 };

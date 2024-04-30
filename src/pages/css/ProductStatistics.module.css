@@ -1,0 +1,115 @@
+.container {
+    width: 1000px;
+    height: 800px;
+    background-color: #302b63;
+
+    /* display: grid; */
+}
+
+.calendarContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-bottom: 1px solid white;
+}
+
+.calendar {
+    display: grid;
+    justify-content: center;
+
+    margin: 20px 0px 20px 0px;
+    border-right: 1px solid white;
+}
+
+.calendarInfo {
+    width: 225px;
+    height: 50px;
+
+    margin-top: 10px;
+}
+
+.explan {
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 10%;
+    width: 90%;
+    
+    background-color: #26224f;
+
+    color: white;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+.priceTitle {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+
+    margin: 20px 0px 20px 0px;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+}
+
+.toptenTitle {
+    color: white;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+
+    padding: 10px;
+    margin: 0px 250px 0px 250px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+.row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+  
+.header {
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+  
+.cell {
+    padding: 5px;
+    text-align: center;
+}
+  
+.cell:last-child {
+    border-right: none;
+}

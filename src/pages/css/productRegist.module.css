@@ -3,7 +3,7 @@
 
     width: 500px;
     height: 800px;
-    background-color: purple;
+    background-color: #302b63;
   
     padding: 10px;
     border-radius: 20px;
@@ -77,9 +77,12 @@ textarea::placeholder {
     align-items: center;
     justify-content: center;
 
-    border: 0px;
+    border-radius: 50%;
     
-    background-color: purple;
+    background-color: #26224f;
+
+    margin-left: 20px;
+    margin-right: 20px;
 
     color: white;
     font-size: 25px;
