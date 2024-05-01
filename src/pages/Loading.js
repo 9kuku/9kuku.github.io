@@ -6,7 +6,7 @@ const Loading = () => {
     return (
         <div className={loading.LoadingContainer}>
             <h2>잠시만 기다려 주세요!</h2>
-            <img src={loadingImage} alt="로딩" />
+            <img className={loading.loadingImage} src={loadingImage} alt="로딩" />
         </div>
     )
 }

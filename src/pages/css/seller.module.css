@@ -20,7 +20,7 @@
 }
 
 .create {
-  background-image: url('./image/product.png');
+  background-image: url("./image/product.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@
 }
 
 .update {
-  background-image: url('./image/update.png');
+  background-image: url("./image/update.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 }
 
 .statistics {
-  background-image: url('./image/statistics.png');
+  background-image: url("./image/statistics.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@
 }
 
 .search {
-  background-image: url('./image/search.png');
+  background-image: url("./image/search.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

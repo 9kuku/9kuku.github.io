@@ -1,94 +1,92 @@
 .container {
-    display: grid;
+  display: grid;
 
-    width: 500px;
-    height: 800px;
-    background-color: #302b63;
-  
-    padding: 10px;
-    border-radius: 20px;
+  width: 500px;
+  height: 800px;
+  background-color: #302b63;
 
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .inputContainer {
-    padding: 10px;
+  padding: 10px;
 
-    display: grid;
+  display: grid;
 
-    color: white;
-    border-bottom: 1px solid;
+  color: white;
+  border-bottom: 1px solid;
 }
 
 .label {
-    color: white;
-    font-size: 25px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    padding: 10px;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  padding: 10px;
 
-    width: 120px;
-    height: 40px;
+  width: 120px;
+  height: 40px;
 }
 
 input {
-    width: inherit;
-    height: 80px;
-    margin-left: 10px;
-    margin-right: 10px;
+  width: inherit;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 textarea {
-    width: inherit;
-    height: 80px;
-    margin-left: 10px;
-    margin-right: 10px;
-    resize: none;
+  width: inherit;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  resize: none;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 textarea::placeholder {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .buttonContainer {
-    color: white;
+  color: white;
 
-    margin: 20px;
+  margin: 20px;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border-radius: 50%;
-    
-    background-color: #26224f;
+  border-radius: 50%;
 
-    margin-left: 20px;
-    margin-right: 20px;
+  background-color: #26224f;
 
-    color: white;
-    font-size: 25px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 
-    cursor: pointer;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  padding: 10px;
+
+  cursor: pointer;
 }

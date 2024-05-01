@@ -1,115 +1,119 @@
 .container {
-    width: 1000px;
-    height: 800px;
-    background-color: #302b63;
-
-    /* display: grid; */
+  width: 1000px;
+  height: 850px;
+  background-color: #302b63;
 }
 
 .calendarContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    border-bottom: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .calendar {
-    display: grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
 
-    margin: 20px 0px 20px 0px;
-    border-right: 1px solid white;
+  margin: 20px 0px 20px 0px;
+  border-right: 1px solid white;
 }
 
 .calendarInfo {
-    width: 225px;
-    height: 50px;
+  width: 225px;
+  height: 50px;
 
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .explan {
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    margin-top: 10px;
-    margin-left: 13px;
-    border-radius: 10%;
-    width: 90%;
-    
-    background-color: #26224f;
+  margin-top: 10px;
+  margin-left: 13px;
+  border-radius: 10%;
+  width: 90%;
 
-    color: white;
-    font-size: 25px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    padding: 10px;
+  background-color: #26224f;
 
-    cursor: pointer;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  padding: 10px;
+
+  cursor: pointer;
 }
 
 .priceTitle {
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 
-    color: white;
-    font-size: 25px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 
-    margin: 20px 0px 20px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 .name {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+
+  font-size: 30px;
 }
 
 .toptenTitle {
-    color: white;
-    font-size: 25px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 
-    padding: 10px;
-    margin: 0px 250px 0px 250px;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+
+  padding: 10px;
+  margin: 0px 250px 0px 250px;
 }
 
 .table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-.row {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+  width: 100%;
 }
-  
-.header {
-    font-weight: bold;
 
-    margin-top: 20px;
+.row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
 }
-  
+
+.header {
+  font-weight: bold;
+
+  margin-top: 20px;
+}
+
 .cell {
-    padding: 5px;
-    text-align: center;
+  padding: 5px;
+  text-align: center;
 }
-  
+
 .cell:last-child {
-    border-right: none;
+  border-right: none;
 }

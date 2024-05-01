@@ -12,14 +12,7 @@ import Loading from "./Loading";
 
 const Products = () => {
   const navigate = useNavigate();
-  // const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1000);
-  //   return () => clearTimeout(timer);
-  // }, []);
   function handleProductRegisterClick() {
     navigate("/seller/product-regist");
   }
@@ -27,31 +20,27 @@ const Products = () => {
     navigate("/seller/product-update");
   }
   function handleProductStatisticsClick() {
-    navigate("/seller/product-statistics")
+    navigate("/seller/product-statistics");
   }
   function handleProductSearchClick() {
-    navigate("/seller/product-search")
+    navigate("/seller/product-search");
   }
   return (
     <>
-    {/* {loading ? (
-      <Loading />
-    ) : ( */}
       <div className={seller.container}>
-        <div className={seller.create} onClick={handleProductRegisterClick} >
+        <div className={seller.create} onClick={handleProductRegisterClick}>
           <span className={seller.label}>상품등록</span>
         </div>
-        <div className={seller.update} onClick={handleProductUpdateClick} >
+        <div className={seller.update} onClick={handleProductUpdateClick}>
           <span className={seller.label}>상품수정</span>
         </div>
-        <div className={seller.statistics} onClick={handleProductStatisticsClick} >
+        <div className={seller.statistics} onClick={handleProductStatisticsClick}>
           <span className={seller.label}>상품통계</span>
         </div>
         <div className={seller.search} onClick={handleProductSearchClick}>
           <span className={seller.label}>상품검색</span>
         </div>
       </div>
-      {/* )} */}
     </>
   );
 };
