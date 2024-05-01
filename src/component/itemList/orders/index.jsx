@@ -1,14 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { useContext, useEffect, useState } from "react";
-import { dispatchOrderContext, ordersContext } from "../../../context/OrdersContext";
+import { dispatchOrderContext, ordersContext } from "../../../context/OrdersContext"; // 경로 수정
 import { orderWrapper } from "./style";
 import OrderItem from "../../item/ordersItem";
 
 const OrderList = ({ fetchOrders }) => {
-  const orderData = useContext(ordersContext);
+  const orderData = useContext(ordersContext)
   const dispatch = useContext(dispatchOrderContext);
   const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0); // totalPages 값을 상태로 관리
+  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -21,7 +21,7 @@ const OrderList = ({ fetchOrders }) => {
       }
     };
     getData();
-  }, [page]);
+  }, [page, fetchOrders]);
 
   return (
     <div>
@@ -36,4 +36,4 @@ const OrderList = ({ fetchOrders }) => {
   );
 };
 
-export default OrderList;
+export default OrderList; // default로 내보내기
